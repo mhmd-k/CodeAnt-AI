@@ -1,14 +1,5 @@
-:root {
-  --main-bg-color: #fafafa;
-  --main-light-color: #ffffff;
-  --text-color: #181d27;
-  --secondary-text-color: #171717;
-}
-
 body {
   font-family: "Inter", serif;
-  background-color: var(--main-bg-color);
-  color: var(--text-color);
 }
 
 * {
@@ -25,7 +16,6 @@ body {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-  color: #414651;
   transition: 0.3s ease-in-out;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -66,7 +56,7 @@ body {
   display: flex;
   padding: 10px;
   border: 1px solid gray;
-  color: var(--text-color);
+  color: #181d27;
   justify-content: space-between;
   width: 100%;
 }
@@ -90,7 +80,6 @@ body {
     height: unset;
     border-right: unset;
     width: 100%;
-    background-color: var(--main-bg-color);
     gap: 20px;
   }
 
@@ -105,7 +94,52 @@ body {
 }
 
 .close-drawer svg {
-  color: var(--text-color);
   width: 24px;
   height: 24px;
+}
+
+.login-btn {
+  font-size: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: 1px solid #e9eaec;
+  padding: 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+.login-btn:hover {
+  background-color: #fafafa;
+}
+
+.login-btn svg {
+  font-size: 24px;
+}
+
+.login-tab-btn {
+  flex: 1;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #e9eaec;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.login-tab-btn::before {
+  all: unset;
 }

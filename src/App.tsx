@@ -4,6 +4,8 @@ import Login from "./pages/login/Login.tsx";
 import Error from "./components/error-element/Error.tsx";
 import Home from "./pages/Home.tsx";
 import Layout from "./components/Layout/Layout.tsx";
+import CodeReview from "./pages/CodeReview.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +20,21 @@ const router = createBrowserRouter([
         path: "repositories",
         element: <Repository />,
       },
+
+      {
+        path: "ai-code-review",
+        element: <CodeReview />,
+      },
     ],
   },
   {
     path: "login",
     element: <Login />,
+    errorElement: <Error />,
+  },
+  {
+    path: "privacy-ploicy",
+    element: <PrivacyPolicy />,
     errorElement: <Error />,
   },
 ]);

@@ -39,17 +39,13 @@ function NavMenu() {
           <span>{selectedMenuItem}</span>{" "}
           {isOpen ? <IoIosArrowUp size={24} /> : <IoIosArrowDown size={24} />}
         </MenuTrigger>
-        <MenuContent
-          gap={5}
-          backgroundColor="var(--main-bg-color)"
-          zIndex={100000}
-        >
+        <MenuContent gap={5} backgroundColor="background" zIndex={100000}>
           {menuOptions.map((e) => (
             <MenuItem
               _hover={{
-                backgroundColor: "#e5e5e5",
+                opacity: 0.8,
               }}
-              color="var(--text-color)"
+              color="text"
               cursor="pointer"
               key={e}
               value={e}

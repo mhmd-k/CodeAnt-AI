@@ -1,19 +1,21 @@
 import { Box, Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { FaArrowUpLong } from "react-icons/fa6";
 import LoginForm from "./LoginForm";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
     <Grid
       templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
-      height="100dvh"
-      backgroundColor="var(--main-light-color)"
+      minHeight="100dvh"
+      backgroundColor="white"
     >
       <Box
         display={{ base: "none", lg: "flex" }}
         justifyContent="center"
         alignItems="center"
         position="relative"
+        bg="cardBg"
       >
         <Image
           src="/src/assets/Subtract.png"
@@ -27,7 +29,7 @@ function Login() {
           <Box
             boxShadow="0 4px 4px 0 rgba(0, 0, 0, 0.25)"
             rounded="24px"
-            backgroundColor="var(--main-light-color)"
+            backgroundColor="cardBg"
             width={445}
           >
             <Flex
@@ -37,7 +39,7 @@ function Login() {
               borderBottom="1px solid #E6E8F0"
             >
               <Image src="/src/assets/logo-small.png" />
-              <Text color="#081735" fontWeight="bold">
+              <Text color="#081735" fontWeight="bold" fontSize="18px">
                 AI to Detect & Autofix Bad Code
               </Text>
             </Flex>
@@ -72,7 +74,7 @@ function Login() {
             rounded={24}
             width={265}
             height={165}
-            backgroundColor="var(--main-light-color)"
+            backgroundColor="white"
             position="absolute"
             right={0}
             boxShadow="0 0 24px 0 rgb(8 ,23 ,53, 16%)"
@@ -115,9 +117,21 @@ function Login() {
         </Box>
       </Box>
 
-      <div>
+      <Flex
+        justifyContent="center"
+        direction="column"
+        gap="32px"
+        bg="#fafafa"
+        padding="24px"
+      >
         <LoginForm />
-      </div>
+        <Text textAlign="center">
+          By signing up you agree to the{" "}
+          <Link to="../privacy-ploicy" style={{ fontWeight: "bold" }}>
+            Privacy Policy.
+          </Link>
+        </Text>
+      </Flex>
     </Grid>
   );
 }

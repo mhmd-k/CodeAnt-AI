@@ -9,13 +9,17 @@ function Error() {
         justifyContent="center"
         alignItems="center"
         height="100vh"
-        width="200px"
+        maxWidth="300px"
         margin="auto"
       >
         <Text fontSize="25px" fontWeight="bold">
-          Page not found
+          Somethng went wrong!
         </Text>
-        <Link className="sidenav-link active-link" to="/">
+        <Link
+          className="sidenav-link active-link"
+          to="/"
+          style={{ width: "fit-content" }}
+        >
           Return to home page
         </Link>
       </VStack>

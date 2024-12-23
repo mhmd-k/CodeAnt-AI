@@ -15,6 +15,7 @@ import {
 import { CgMenu } from "react-icons/cg";
 
 import NavMenu from "./NavMenu";
+import { Link } from "react-router-dom";
 
 function MobileNavbar() {
   return (
@@ -25,19 +26,21 @@ function MobileNavbar() {
       padding="16px"
       borderBottom="1px solid gray"
     >
-      <Image src="/src/assets/logo.png" alt="logo" objectFit="none" />
+      <Link to="/">
+        <Image src="/src/assets/logo.png" alt="logo" objectFit="none" />
+      </Link>
       <DrawerRoot placement="top">
         <DrawerBackdrop />
         <DrawerTrigger asChild>
-          <IconButton>
-            <CgMenu />
+          <IconButton bg="Background">
+            <CgMenu color="text" />
           </IconButton>
         </DrawerTrigger>
-        <DrawerContent backgroundColor="var(--main-bg-color)">
+        <DrawerContent backgroundColor="background">
           <DrawerHeader>
             <Image src="/src/assets/logo.png" alt="logo" width="161.5px" />
             <DrawerCloseTrigger
-              backgroundColor="unset"
+              backgroundColor="background"
               className="close-drawer"
             />
           </DrawerHeader>
