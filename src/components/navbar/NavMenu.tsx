@@ -39,13 +39,14 @@ function NavMenu() {
           <span>{selectedMenuItem}</span>{" "}
           {isOpen ? <IoIosArrowUp size={24} /> : <IoIosArrowDown size={24} />}
         </MenuTrigger>
-        <MenuContent gap={5} backgroundColor="background" zIndex={100000}>
+        <MenuContent gap={5} zIndex={100000} bg="white">
           {menuOptions.map((e) => (
             <MenuItem
               _hover={{
                 opacity: 0.8,
+                bg: "var(--bg-color)",
               }}
-              color="text"
+              color="fg.inverted"
               cursor="pointer"
               key={e}
               value={e}
@@ -59,7 +60,7 @@ function NavMenu() {
       <div className="sidenav-menu">
         <VStack width="100%">
           <NavLink
-            to={"/repositories"}
+            to={"/"}
             className={(e) =>
               e.isActive ? "sidenav-link active-link" : "sidenav-link"
             }
@@ -102,7 +103,7 @@ function NavMenu() {
 
         <VStack width="100%">
           <NavLink
-            to={"/how-to-use"}
+            to={"/support"}
             className={(e) =>
               e.isActive ? "sidenav-link active-link" : "sidenav-link"
             }

@@ -7,7 +7,7 @@ function LoginForm() {
       backgroundColor="colors.primary"
       rounded={10}
       border="1px solid #e9eaec"
-      margin="auto"
+      margin="0 auto"
       bg="white"
       width="100%"
       maxWidth="670px"

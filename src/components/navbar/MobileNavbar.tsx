@@ -24,23 +24,24 @@ function MobileNavbar() {
       justifyContent="space-between"
       width="100%"
       padding="16px"
-      borderBottom="1px solid gray"
+      borderBottom="1px solid #f5f5f5"
     >
       <Link to="/">
-        <Image src="/src/assets/logo.png" alt="logo" objectFit="none" />
+        <Image src="/src/assets/logo.png" alt="logo" />
       </Link>
       <DrawerRoot placement="top">
         <DrawerBackdrop />
         <DrawerTrigger asChild>
-          <IconButton bg="Background">
-            <CgMenu color="text" />
+          <IconButton bg="var(--bg-color)">
+            <CgMenu color="#181d27" />
           </IconButton>
         </DrawerTrigger>
-        <DrawerContent backgroundColor="background">
+        <DrawerContent background="white" color="#414651">
           <DrawerHeader>
             <Image src="/src/assets/logo.png" alt="logo" width="161.5px" />
             <DrawerCloseTrigger
-              backgroundColor="background"
+              backgroundColor="var(--bg-color)"
+              color="#181D27"
               className="close-drawer"
             />
           </DrawerHeader>

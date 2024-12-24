@@ -8,14 +8,14 @@ function Login() {
     <Grid
       templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
       minHeight="100dvh"
-      backgroundColor="white"
+      bg="var(--bg-color)"
+      color="var(--text-color)"
     >
       <Box
         display={{ base: "none", lg: "flex" }}
         justifyContent="center"
         alignItems="center"
         position="relative"
-        bg="cardBg"
       >
         <Image
           src="/src/assets/Subtract.png"
@@ -122,7 +122,7 @@ function Login() {
         direction="column"
         gap="32px"
         bg="#fafafa"
-        padding="24px"
+        padding={{ base: "16px", lg: "24px" }}
       >
         <LoginForm />
         <Text textAlign="center">
